@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daftar Akun</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="brand">Lilipadil</h1>
+      <h2>Register</h2>
+
+      <form id="signupForm" novalidate>
+        <!-- Email -->
+        <div class="form-input">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="contoh@email.com"
+            autocomplete="email"
+          />
+          <span class="error-message" id="emailError"></span>
+        </div>
+
+        <!-- Password -->
+        <div class="form-input">
+          <label for="password">Password</label>
+          <div class="password-wrapper">
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Minimal 8 karakter"
+              autocomplete="new-password"
+            />
+            <span class="toggle-password" id="togglePassword" title="Tampilkan/Sembunyikan kata sandi">&#128065;</span>
+          </div>
+          <span class="error-message" id="passwordError"></span>
+        </div>
+
+        <!-- Konfirmasi Password -->
+        <div class="form-input">
+          <label for="confirmPassword">Retype Password</label>
+          <div class="password-wrapper">
+            <input
+              type="password"
+              id="confirmPassword"
+              name="confirmPassword"
+              placeholder="Ulangi kata sandi"
+              autocomplete="new-password"
+            />
+            <span class="toggle-password" id="toggleConfirm" title="Tampilkan/Sembunyikan kata sandi">&#128065;</span>
+          </div>
+          <span class="error-message" id="confirmError"></span>
+        </div>
+
+        <!-- Syarat & Ketentuan -->
+        <div class="remember">
+          <input type="checkbox" id="terms" name="terms" />
+          <label for="terms">I agree to the <a href="#">applicable terms and conditions.</a></label>
+        </div>
+        <span class="error-message" id="termsError"></span>
+
+        <!-- Tombol Daftar -->
+        <button type="submit" id="submitBtn">Register</button>
+
+        <!-- Pesan sukses/gagal -->
+        <p class="form-message" id="formMessage"></p>
+      </form>
+
+      <p id="message">have an account? <a href="#">Sign In</a></p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
